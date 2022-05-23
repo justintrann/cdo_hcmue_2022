@@ -25,10 +25,11 @@ Admin
 1. Clone the repository using the command "git clone [link]"
 2. Configure the .env file accordingly with Oracle Acccount
 4. Run command 
+
 ```
-composer install
+composer update
+php artisan key:generate
 php artisan migrate:fresh --seed
 php artisan storage:link
 php artisan serve
-
 ```
