@@ -43,18 +43,23 @@
                 <label for="brand" class="">{{ __('Brand') }}</label>
                 <div class="form-group">
                     <div>
+                        <span>- Current Brand: </span>
+                        <span style="color: red;font-weight: bold">{{$product->brand}}</span>
                         <select name="brand" id="addproductbrand" class="form-control">
                             <option selected="true" value="" disabled hidden>Choose product brand</option>
-                            <option value="Nike">Nike</option>
+{{--                            <option selected="true" value="{{ old('brand') == $product->brand ? 'selected' : '' }}">--}}
+{{--                                {{$product->brand}}</option>--}}
                             <option value="Adidas">Adidas</option>
-                            <option value="New Balance">New Balance</option>
                             <option value="Asics">Asics</option>
-                            <option value="Puma">Puma</option>
-                            <option value="Skechers">Skechers</option>
-                            <option value="Fila">Fila</option>
                             <option value="Bata">Bata</option>
                             <option value="Burberry">Burberry</option>
                             <option value="Converse">Converse</option>
+                            <option value="Fila">Fila</option>
+                            <option value="New Balance">New Balance</option>
+                            <option value="Nike">Nike</option>
+                            <option value="Puma">Puma</option>
+                            <option value="Skechers">Skechers</option>
+
                         </select>
                     </div>
                 </div>
@@ -64,6 +69,8 @@
                 <label for="gender" class="">{{ __('Gender') }}</label>
                 <div class="form-group">
                     <div>
+                        <span>- Current Gender: </span>
+                        <span style="color: springgreen;font-weight: bold">{{$product->gender}}</span>
                         <select name="gender" id="addproductgender" class="form-control">
                             <option selected="true" value="" disabled hidden>Choose product brand</option>
                             <option value="Male">Male</option>
@@ -96,15 +103,15 @@
                     @enderror
                 </div>
             </div>
-            
+
 
 
         </div>
-        
+
         <button type="submit" class="btn btn-success w-100">EDIT PRODUCT</button>
-    
+
     </form>
 
 </div>
-    
+
 @endsection
