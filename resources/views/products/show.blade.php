@@ -10,6 +10,7 @@
        <div class="col-lg-4 col-sm-12 pl-5 pr-5">
         <h6><strong>{{ $product->brand }}</strong></h6>
         <h5>{{ $product->name }}</h5>
+           <h5>Suit for {{ $product->gender }}</h5>
             <div class="card">
                 <div class="card-body">
                     <div class="show-info">
@@ -21,7 +22,7 @@
                                 <option selected="true" value="nothing" disabled hidden>Choose size</option>
                                 @foreach($sizes as $size)
                                     @if($size->quantity > 0)
-                                        <option value="{{ $size->name }}">{{ $size->name }}</option>
+                                        <option value="{{ $size->name }}">{{ $size->name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp {{ $size->quantity }} In Stock</option>
                                     @endif
                                 @endforeach
                             </select>

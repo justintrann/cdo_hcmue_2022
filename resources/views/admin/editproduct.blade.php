@@ -59,7 +59,6 @@
                             <option value="Nike">Nike</option>
                             <option value="Puma">Puma</option>
                             <option value="Skechers">Skechers</option>
-
                         </select>
                     </div>
                 </div>
