@@ -15,7 +15,9 @@
           <div class="card-body">
             <h5 class="card-title">Price</h5>
             <input type="range" min="{{ $minPrice }}" max="{{ $maxPrice }}" value="{{ $maxPrice }}" class="slider selector" id="pricerange">
-            <p class="p-0 m-0">Max: USD <span id="currentrange">{{ $maxPrice }}</span></p>
+              <span>Max: USD </span>
+              <input type="number" id="currentrange" class="selector" min="{{ $minPrice }}" max="{{ $maxPrice }}"  value="{{ $maxPrice }}" oninput="someFunction()">
+{{--              <p class="p-0 m-0">Max: USD <span id="currentrange">{{ $maxPrice }}</span></p>--}}
           </div>
         </div>
 
@@ -45,7 +47,7 @@
       <h3>Product</h3>
 
       <div class="row d-flex justify-content-start" id="products">
-
+        Loading ...
       </div>
 
     </div>
@@ -53,6 +55,26 @@
   </div>
 </div>
 
+@yield('script')
+<script>
+    var range = document.getElementById('pricerange');
+    var field = document.getElementById('currentrange');
 
+    range.addEventListener('input', function (e) {
+        field.value = e.target.value;
+    });
+    field.addEventListener('input', function (e) {
+        range.value = e.target.value;
+    });
+
+    function someFunction() {
+        $(document).keypress(function(e) {
+            if(e.which == 13) {
+            //    .... I'm still not find how-to do this
+            }
+        });
+    }
+
+</script>
 
 @endsection

@@ -22,7 +22,7 @@
                                 <option selected="true" value="nothing" disabled hidden>Choose size</option>
                                 @foreach($sizes as $size)
                                     @if($size->quantity > 0)
-                                        <option value="{{ $size->name }}">{{ $size->name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp {{ $size->quantity }} In Stock</option>
+                                        <option value="{{ $size->name }}">{{ $size->name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{ $size->quantity }} In Stock</option>
                                     @endif
                                 @endforeach
                             </select>
