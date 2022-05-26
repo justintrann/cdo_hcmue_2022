@@ -99,10 +99,10 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $sizes = Stock::where('product_id','=',$product->id)
-                     ->get([
-                            'name',
-                            'quantity',
-                        ]);
+            ->get([
+                'name',
+                'quantity',
+            ]);
 
         return view('products.show', compact ('product','sizes'));
     }

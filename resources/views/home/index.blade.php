@@ -95,6 +95,7 @@
               <div class="product-info">
                 <div class="info-1"><img src="{{ asset('/storage/'.$product->image) }}" alt=""></div>
                 <div class="info-4"><h5>{{ $product->brand }}</h5></div>
+                  <div class="info-4"><h6>For {{ $product->gender }}</h6></div>
                 <div class="info-2"><a href="product/{{ $product->id }}"><h4>{{ $product->name }}</h4></a></div>
                 <div class="info-3"><h5>USD {{ $product->price }}$</h5></div>
               </div>
