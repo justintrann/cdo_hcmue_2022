@@ -10,7 +10,7 @@ Guest
 Customer
 1. Login
 2. Add product to cart
-3. Checkout
+3. Checkout [Currently noGateway. So all purchase is PAID]
 4. View purchase history
 
 Admin 
@@ -23,8 +23,8 @@ Admin
 
 ### Installation
 1. Clone the repository using the command "git clone [link]"
-2. Configure the .env file accordingly with Oracle Acccount
-4. Run command 
+2. Configure the .env file accordingly with your Oracle Database Acccount
+3. Run command below
 
 ```
 composer update
