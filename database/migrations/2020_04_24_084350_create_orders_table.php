@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('name');
             $table->text('cart');
             $table->string('phonenumber');
@@ -25,7 +26,6 @@ class CreateOrdersTable extends Migration
             $table->text('address');
             $table->integer('zipcode');
             $table->integer('payment_id')->nullable();
-            
         });
     }
 

@@ -14,15 +14,15 @@ class ProfilesTableSeeder extends Seeder
     {
         DB::table('profiles')->insert([
             [
-                'user_id'=>1,
+                'user_id'=>"1",
                 'phonenumber'=>'012345678',
                 'country'=>'Vietnam',
                 'city'=>'Saigon',
                 'address'=>'280 An Duong Vuong',
-                'zipcode'=>700000
+                'zipcode'=>70000
             ],
             [
-                'user_id'=>2,
+                'user_id'=>"2",
                 'phonenumber'=>'08215551234',
                 'country'=>'Indonesia',
                 'city'=>'Medan',
@@ -30,7 +30,7 @@ class ProfilesTableSeeder extends Seeder
                 'zipcode'=>27321
             ],
             [
-                'user_id'=>3,
+                'user_id'=>"3",
                 'phonenumber'=>'42912345',
                 'country'=>'United State of America',
                 'city'=>'Seattle',
@@ -38,7 +38,7 @@ class ProfilesTableSeeder extends Seeder
                 'zipcode'=>78231
             ],
             [
-                'user_id'=>4,
+                'user_id'=>"4",
                 'phonenumber'=>'032912345',
                 'country'=>'China',
                 'city'=>'Guangzhou',
